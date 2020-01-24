@@ -11,18 +11,37 @@
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
     event.preventDefault();
-    // var wordArr =[];
-      
+ 
     var input = $("input#input").val();
-      // var wordArr = input.split(' ');
-     
-    var vowels = ["a", "e", "i", "o", "u" ];
+    var wordArr = input.split(" ");
+    
+    var vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
       vowels.forEach(function(vowel){
-        if (input.charAt(0) === vowel) {
+        if (vowel.includes(input[0][0])) {
           $("#result").text(input + "way")
+       // } else if (wordArr.charAt(0) !== vowel) {
+         // for (i=0; i<wordArr.length; i++) {
+
+          //}
+
         }
+
+
+
       });
-    var num = 2
+    
+
+
+
+
+
+
+
+
+
+
+
+
     
     //console.log(slipByChar);
     var vowels = ["a", "e", "i", "o", "u" ];
@@ -34,11 +53,13 @@ $(document).ready(function() {
       
       //sliced = splitByChar.slice(0, 2);
       
-      if (input.charAt(0) === consonant){
+      if (input.charAt(0) === consonant  && input.charAt(1) === consonant && input.charAt(3) === consonant){
 
-       sliced = splitByChar.slice(0, 3);
+      sliced = splitByChar.slice(0, 3);
+       
       }
       
+    
       
       // if (input.charAt(0) === consonant && input.charAt(1) === consonant && input.charAt(2) === consonant) {
       //   sliced = splitByChar.slice(0, 2);
@@ -55,13 +76,13 @@ $(document).ready(function() {
         
       //}
       
-      
+     
       
      });
      
-     console.log(sliced);
+     //console.log(sliced);  
     });
-         
+    
         //   var sliceCon = input.slice(num);
         //   $("#result").text(sliceCon + "ay")
         // }
